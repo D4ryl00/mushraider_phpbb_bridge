@@ -31,7 +31,7 @@ $lang = array_merge($lang, array(
     'ACP_MUSHRAIDER_BRIDGE_PERMS_TITLE'     => 'Configuration des permissions de MushRaider',
     
     'MUSHRAIDER_BRIDGE_ENABLE'              => 'Activer le Bridge MushRaider?',
-    'MUSHRAIDER_BRIDGE_KEY'                 => 'HashKey du bridge MushRaider',
+    'MUSHRAIDER_BRIDGE_KEY'                 => 'Clef secrète du bridge MushRaider',
     'MUSHRAIDER_BRIDGE_KEY_EXPLAIN'         => 'Il s\'agit de la clé que vous avez entré dans le panneau de configuration de MushRaider',
     'MUSHRAIDER_BRIDGE_ADMINS'              => 'Administrateurs',
     'MUSHRAIDER_BRIDGE_ADMINS_EXPLAIN'      => 'Liste des groupes phpBB considérés comme administrateurs de MushRaider /!\ Seuls les groupes appartenant a une de ces listes peut se connecter a MushRaider /!\ ',
