@@ -34,6 +34,6 @@
     <copy>
       <file from="root/*.*" to="*.*" />
     </copy>
-	<php-installer>install/index.php</php-installer>
+	<php-installer>install_mushraider.php</php-installer>
   </action-group>
 </mod>
