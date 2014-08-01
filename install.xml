@@ -34,9 +34,6 @@
     <copy>
       <file from="root/*.*" to="*.*" />
     </copy>
-	<php-installer><![CDATA[acp_mushraider_bridge_install.php]]></php-installer>
-<diy-instructions lang="en">
-	<![CDATA[1. Browse to the file aacp_mushraider_bridge_install.php in the root of your forum to make the database changes]]>
-</diy-instructions>
+	<php-installer>install/index.php</php-installer>
   </action-group>
 </mod>
