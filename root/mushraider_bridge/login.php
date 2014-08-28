@@ -31,9 +31,9 @@ if ($_POST && $config['mrb_enable']) {
     } else {
         $salt = $config['mrb_hashkey'];
         // Decrypt MushRaider password
-        $iv_size = mcrypt_get_iv_size(MCRYPT_BLOWFISH, MCRYPT_MODE_ECB);
+        $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB);
         $iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
-        $password = utf8_decode(trim(mcrypt_decrypt(MCRYPT_BLOWFISH, $salt, $_POST['pwd'], MCRYPT_MODE_ECB, $iv)));
+        $password = utf8_decode(trim(mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $salt, $_POST['pwd'], MCRYPT_MODE_ECB, $iv)));
         $username = $_POST['login'];
         // Test if phpBB connects user
         $result = $auth->login($username, $password);
