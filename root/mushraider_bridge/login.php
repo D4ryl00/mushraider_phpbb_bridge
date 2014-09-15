@@ -36,7 +36,7 @@ if ($_POST && $config['mrb_enable']) {
         $password = utf8_decode(trim(mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $salt, $_POST['pwd'], MCRYPT_MODE_ECB, $iv)));
         $username = $_POST['login'];
         // Test if phpBB connects user
-        $result = $auth->login($username, $password);
+        $result = $auth->login($username, htmlspecialchars($password));
         $error = $result['error_msg'];
         if ($result['status'] == LOGIN_SUCCESS)
          {
