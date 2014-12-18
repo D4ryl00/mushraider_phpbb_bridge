@@ -54,7 +54,7 @@
             <li>Un forum phpBB en version 3.0.X installé et fonctionnel (<a href="http://forums.phpbb-fr.com/documentation/installation/installation-de-phpbb3-a170-view.html" > cf. Forum phpbb-fr </a> )</li>
             <li>Un raidplanner MushRaider installé en version 1.4+ ( <a href="http://mushraider.com/documentation/installation/" >cf. MushRaider.com</a> )</li>
             <li>Un accès à l'hébergement du forum pour être en mesure de déposer des fichiers (vous avez probablement déjà ça si vous avez un forum installé )</li>
-            <li>Le code du module disponible ici : <a href="#pre-requis" > blablabla </a> </li>
+            <li>Le zip du module disponible ici : <a href="https://github.com/Kyah/mushraider_phpbb_bridge/zipball/master" > https://github.com/Kyah/mushraider_phpbb_bridge/zipball/master </a> </li>
             </ul></p>
 
             <h3>
@@ -62,29 +62,75 @@
                 <span class="octicon octicon-link"></span></a>Installation du module phpBB
             </h3>
             <p>
-            <h4>Extraire l'archive</h4>
-            <ul><li>Extraire l'archive téléchargée ci-dessus</li></ul>
-            <h4>Dépot des fichiers</h4>
-            <ul>
-            <li>Se connecter au FTP de l'hébergement et se positionner dans le dossier racine du forum</li>
-            <li>Copier l'intégralité des fichiers et dossiers contenu dans le dossier root qui a été extrait précédemment</li>
-            </ul>
-            <h4>Exécution de l'installation</h4>
-            <ul>
-            <li>Se rendre à la page d'installation du module sur son forum (par exemple http://www.maguilde.fr/f
-            orum/install_mushraider.php )</li>
-            <li>Laisser les valeurs par défaut et appuyer sur Envoyer</li>
-            <li>La page suivante demande un validation, appuyez sur Oui</li>
-            <li>Et voilà, le module est installé!</li>
-            </ul>
-
-            <h4>Suppression du fichier devenu inutile</h4>
-            <ul>
-            <li>Se reconnecter au FTP de l'hébergement et se positionner dans le dossier racine du forum</li>
-            <li>Supprimer le fichier install_mushraider.php (cela éviteras que des personnes mal intentionnées intéragissent avec le module)</li>
-            </ul>
+                <h4>Extraction de l'archive</h4>
+                <ul>
+                    <li>Extrayez l'archive téléchargée ci-dessus</li>
+                    <li>Accedez au contenu du dossier extrait précedment</li>
+                </ul>
+                <h4>Dépot des fichiers</h4>
+                <ul><li>Connectez vous au FTP de l'hébergement et positionnez vous dans le dossier racine du forum</li>
+                <li>Copiez l'intégralité des fichiers et dossiers contenu dans le dossier root qui a été extrait précédemment</li></ul>
+                <h4>Exécution de l'installation</h4>
+                <ul><li>Rendez vous à la page d'installation du module sur le forum (par exemple http://www.maguilde.fr/forum/install_mushraider.php )</li>
+                <li>Laissez les valeurs par défaut et appuyez sur Envoyer</li>
+                <li>La page suivante demande un validation, appuyez sur Oui</li>
+                <li>Et voilà, le module est installé!</li></ul>
+                <h4>Suppression du fichier devenu inutile</h4>
+                <ul><li>Reconnectez vous au FTP de l'hébergement et positionnez vous dans le dossier racine du forum</li>
+                <li>Supprimez le fichier install_mushraider.php (cela éviteras que des personnes mal intentionnées intéragissent avec le module)</li></ul>
             </p>
-
+            
+            <h3>
+                <a id="configuration-phpBB" class="anchor" href="#configuration-phpBB" aria-hidden="true">
+                <span class="octicon octicon-link"></span></a>Configuration de phpBB
+            </h3>
+            <p>
+                <ul>
+                    <li>Connectez vous au panneau d'administration du forum</li>
+                    <li>Trouvez l'onglet .Mods en haut de la page et cliquez dessus</li>
+                    <li>A gauche, en dessous de la légende MUSHRAIDER BRIDGE se trouvent les deux pages de configuration du module MushRaider
+                </ul>
+                    <h4>Général</h4>
+                    Cette page permet de gérer la configuration de base du module. Voici les options disponibles :
+                    <ul><li>Activer le Bridge MushRaider? : Permet de désactiver le module si il venait a ne  plus être utile.</li>
+                    <b>ATTENTION</b> cela ne change pas la configuration de MushRaider
+                    </ul>
+                    <h4>Permissions</h4>
+                    Cette partie permet d'associer les groupes existant sur le forum aux 3 rôles possibles dans le raidplanner :
+                    <ul>
+                        <li>Admin</li>
+                        <li>Officier</li>
+                        <li>Membre</li>
+                    </ul>
+                    Des valeurs sont remplies par défaut mais il est conseillé de personnaliser ces paramètres en fonction de l'organisation mise en place sur le forum. 
+                    Il est possible d'associer plusieurs groupes à un même rôle, pour cela il suffit de maintenir la touche CTRL du clavier tout en cliquant sur les différents groupes.
+                    <br/><br/>
+                    <b>ATTENTION</b> Si un groupe se retrouve dans plusieurs rôles, seul celui offrant le plus de liberté sera choisi. A savoir : Admin > Officier > Membre
+                    <br/><br/>
+                    Une fois ces valeurs modifiées, appuyez sur Envoyer
+            </p>
+            
+            <h3>
+                <a id="configuration-mushraider" class="anchor" href="#configuration-mushraider" aria-hidden="true">
+                <span class="octicon octicon-link"></span></a>Configuration de MushRaider
+            </h3>
+            <p>
+                <ul>
+                    <li>Connectez vous avec un compte Administrateur au raidplanner</li>
+                    <li>Accédez au panneau d'Admin</li>
+                    <li>Dans les onglets de gauche sélectionnez <b>Paramètres</b> puis <b>Intégration</b></li>
+                    <li>Cochez la case <b>Intégrer MushRaider dans votre site/forum actuel</b></li>
+                    <li>Dans la case <b>Adresse du site tier</b> indiquez l'url suivie de /mushraider_bridge/login.php. Exemple : http://www.maguilde.fr/forum/mushraider/login.php</li>
+                    <li>Dans la case <b>Clef secrète</b> indiquez une clé que vous avez choisi précedment dans la configuration du forum.</li>
+                    <li>Appuyez sur Sauvegarder</li>
+                </ul>
+                
+                Voilà c'est terminé! Désormais seul les comptes du forum peuvent se connecter au raidplanner!
+                <br/><br/>
+                
+                <b>ATTENTION</b> Si vous votre version de MushRaider est inférieure a la 1.3.5 et que vous aviez des comptes déjà existant dans le raidplanner et que vos utilisateurs ont le même nom sur le forum mais que leurs mot de passe diffèrent entre les 2 outils. Il faudra malheureusement supprimer leur compte et qu'ils recréé tout leurs personnages
+            <br/>
+            </p>
             <h3>
                 <a id="support-contact" class="anchor" href="#support-contact" aria-hidden="true">
                     <span class="octicon octicon-link"></span>
