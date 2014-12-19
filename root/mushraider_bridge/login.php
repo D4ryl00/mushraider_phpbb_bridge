@@ -22,9 +22,6 @@ include($phpbb_root_path . 'includes/functions_user.' . $phpEx);
 $user->session_begin();
 $auth->acl($user->data);
 
-// Add lang file
-$user->setup(array('mods/mushraider_bridge',));
-
 if ($_POST && $config['mrb_enable']) {
     if (!isset($_POST['login']) || !isset($_POST['pwd'])) {
         echo json_encode(array('authenticated' => false));
@@ -33,7 +30,7 @@ if ($_POST && $config['mrb_enable']) {
         // Decrypt MushRaider password
         $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB);
         $iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
-        $password = utf8_decode(trim(mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $salt, $_POST['pwd'], MCRYPT_MODE_ECB, $iv)));
+        $password = utf8_decode(trim(mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $salt, stripslashes($_POST['pwd']), MCRYPT_MODE_ECB, $iv)));
         $username = $_POST['login'];
         // Test if phpBB connects user
         $result = $auth->login($username, htmlspecialchars($password));
