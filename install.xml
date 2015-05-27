@@ -32,7 +32,7 @@
   </header>
   <action-group>
     <copy>
-      <file from="root/*.*" to="*.*" />
+      <file from="ext/mushraider_bridge/*.*" to="*.*" />
     </copy>
 	<php-installer>install_mushraider.php</php-installer>
   </action-group>
