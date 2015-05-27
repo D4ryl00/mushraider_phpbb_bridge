@@ -21,7 +21,7 @@ class main_info {
     function module()
     {
         return array(
-            'filename'	=> 'mushraider_bridge\acp\main_module',
+            'filename'	=> 'kyah\mushraider_bridge\acp\main_module',
             'title'		=> 'ACP_MUSHRAIDER_BRIDGE',
             'version'   => '1.1.0',
             'modes'     => array(

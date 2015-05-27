@@ -1,5 +1,5 @@
 {
-   "name": "mushraider_bridge",
+   "name": "kyah/mushraider_bridge",
    "type": "phpbb-extension",
    "description": "Allow MushRaider to use phpBB users for authentication.",
    "homepage": "https://github.com/Kyah/mushraider_phpbb_bridge",
