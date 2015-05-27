@@ -16,14 +16,14 @@ if (!defined('IN_PHPBB')) {
 	exit;
 }
 
-class acp_mushraider_bridge_info {
+class main_info {
 
     function module()
     {
         return array(
-            'filename'	=> 'acp_mushraider_bridge',
+            'filename'	=> 'mushraider_bridge\acp\main_module',
             'title'		=> 'ACP_MUSHRAIDER_BRIDGE',
-            'version'   => '1.0.0',
+            'version'   => '1.1.0',
             'modes'     => array(
 				'config' => array(
 					'title' => 'ACP_MRB_CONFIG',
