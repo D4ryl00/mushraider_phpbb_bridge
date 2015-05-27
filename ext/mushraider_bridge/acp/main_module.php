@@ -17,7 +17,7 @@ if (!defined('IN_PHPBB'))
     exit;
 }
 
-class acp_mushraider_bridge {
+class main_module {
 
    var $u_action;
    var $new_config = array();
