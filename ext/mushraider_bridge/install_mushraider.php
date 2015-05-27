@@ -34,7 +34,7 @@ if (!file_exists($phpbb_root_path . 'umil/umil_auto.' . $phpEx))
 * 'UNINSTALL_' . $mod_name
 * 'UNINSTALL_' . $mod_name . '_CONFIRM'
 */
-$language_file = 'mods/info_acp_mushraider_bridge';
+$language_file = 'common';
 
 // The name of the mod to be displayed during installation.
 $mod_name = 'MUSHRAIDER_BRIDGE';
