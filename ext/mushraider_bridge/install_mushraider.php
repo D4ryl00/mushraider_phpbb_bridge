@@ -53,8 +53,8 @@ $version_config_name = 'mushraider_bridge_version';
 * The version numbering must otherwise be compatible with the version_compare function - http://php.net/manual/en/function.version-compare.php
 */
 $versions = array(
-	// Version 1.0.0
-	'1.0.0'	=> array(
+	// Version 1.1.0
+	'1.1.0'	=> array(
 		// Add a permission settings
 		'permission_add' => array(
 			array('a_mushraider_bridge', 1),
