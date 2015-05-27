@@ -154,7 +154,7 @@ class main_module {
                 }
                 
                 $this->page_title = 'ACP_MUSHRAIDER_BRIDGE';
-                $this->tpl_name = 'acp_mushraider_bridge';
+                $this->tpl_name = 'mushraider_bridge';
                 break;
             case 'permissions':
                 $display_vars = array(
@@ -303,7 +303,7 @@ class main_module {
                 }
                 
                 $this->page_title = 'ACP_MUSHRAIDER_BRIDGE';
-                $this->tpl_name = 'acp_mushraider_bridge';
+                $this->tpl_name = 'mushraider_bridge';
                 break;
             default:
                 trigger_error('NO_MODE', E_USER_ERROR);
