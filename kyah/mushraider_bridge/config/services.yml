@@ -1,0 +1,10 @@
+services:
+  kyah.mushraider_bridge.controller:
+    class: kyah\mushraider_bridge\controller\login
+    arguments:
+      - @config
+      - @user
+      - @auth
+      - @request
+      - %core.root_path%
+      - %core.php_ext%

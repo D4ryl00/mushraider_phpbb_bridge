@@ -1,0 +1,52 @@
+<!-- INCLUDE overall_header.html -->
+<!--
+/**
+* @author Julien Goret (Kyah) http://www.octetsetquartdepouces.net
+*
+* @package mushraider_bridge
+* @version $Id:
+* @copyright (c) 2014 Julien Goret
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+*
+*/
+ -->
+ 
+<a name="maincontent"></a>
+
+<h1>{L_ACP_MUSHRAIDER_BRIDGE}</h1>
+
+<form id="acp_mrb_config" method="post" action="{U_ACTION}">
+    <!-- IF S_ERROR -->
+        <div class="errorbox">
+            <h3>{L_WARNING}</h3>
+            <p>{ERROR_MSG}</p>
+        </div>
+    <!-- ENDIF -->
+
+    <fieldset>
+        <legend>{L_ACP_MUSHRAIDER_BRIDGE_CONFIG_TITLE}</legend>
+		<!-- BEGIN options -->
+			<!-- IF options.S_LEGEND -->
+				<!-- IF not options.S_FIRST_ROW -->
+					</fieldset>
+				<!-- ENDIF -->
+				<fieldset>
+					<legend>{options.LEGEND}</legend>
+			<!-- ELSE -->
+
+				<dl>
+					<dt><label for="{options.KEY}">{options.TITLE}:</label><!-- IF options.S_EXPLAIN --><br /><span>{options.TITLE_EXPLAIN}</span><!-- ENDIF --></dt>
+					<dd>{options.CONTENT}</dd>
+				</dl>
+
+			<!-- ENDIF -->
+		<!-- END options -->
+    
+    <fieldset class="quick">
+		<input class="button1" type="submit" name="submit" value="{L_SUBMIT}" />&nbsp;&nbsp;<input class="button1" type="reset" value="{L_RESET}" name="reset" />
+		{S_FORM_TOKEN}
+	</fieldset>
+    
+</form>
+ 
+<!-- INCLUDE overall_footer.html -->

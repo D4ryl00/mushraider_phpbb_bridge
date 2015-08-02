@@ -1,0 +1,3 @@
+kyah_mushraider_bridge_base_controller:
+    pattern: /mushraider_bridge
+    defaults: { _controller: kyah.mushraider_bridge.controller:base }
