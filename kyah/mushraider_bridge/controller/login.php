@@ -86,5 +86,31 @@ class login {
             redirect(append_sid("{$this->root_path}index.$this->php_ext"));
         }
     }
+
+	/* get ALL groups for a user, not only one */
+	private function getUserGroups($user_id, $onlyId = true)
+	{
+
+		$sql = 'SELECT ug.*, g.*
+					FROM ' . GROUPS_TABLE . ' g, ' . USER_GROUP_TABLE . " ug
+					WHERE ug.user_id = $user_id
+						AND g.group_id = ug.group_id
+					ORDER BY g.group_type DESC, ug.user_pending ASC, g.group_name";
+		$result = $this->db->sql_query($sql);
+
+		$groups = array();
+
+		while ($row = $this->db->sql_fetchrow($result))
+		{
+			if ($onlyId)
+			{
+				$groups[] = (int) $row['group_id'];
+			}
+			else
+			{
+				$groups[] = $row;
+			}
+		}
+		return $groups;
+	}
 }
-?>
