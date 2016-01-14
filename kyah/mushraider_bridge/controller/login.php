@@ -16,15 +16,16 @@
 namespace kyah\mushraider_bridge\controller;
 
 class login {
-    public function __construct(\phpbb\config\config $config, \phpbb\user $user, \phpbb\auth\auth $auth, \phpbb\request\request $request, $root_path, $php_ext)
-    {
-        $this->config = $config;
-        $this->user = $user;
-        $this->auth = $auth;
-        $this->request = $request;
-        $this->root_path = $root_path;
-        $this->php_ext = $php_ext;
-    }
+	public function __construct(\phpbb\config\config $config, \phpbb\user $user, \phpbb\auth\auth $auth, \phpbb\request\request $request, $root_path, $php_ext, $db)
+	{
+		$this->config = $config;
+		$this->user = $user;
+		$this->auth = $auth;
+		$this->request = $request;
+		$this->root_path = $root_path;
+		$this->php_ext = $php_ext;
+		$this->db = $db;
+	}
 
     public function base() {
         $this->user->session_begin();
