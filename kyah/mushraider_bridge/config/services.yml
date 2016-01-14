@@ -8,3 +8,4 @@ services:
       - @request
       - %core.root_path%
       - %core.php_ext%
+      - @dbal.conn
